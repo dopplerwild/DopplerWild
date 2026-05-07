@@ -23,7 +23,7 @@ Project page: <https://dopplerwild.github.io/DopplerWild-web/>
 
 ## 1. Environment Setup
 
-We provide a pinned `requirements.txt` (CUDA 12.8, PyTorch 2.10).
+We provide a pinned `requirements.txt` (CUDA 12.8, PyTorch 2.10). The codebase has been tested with Python 3.10.12.
 
 ```bash
 git clone https://github.com/dopplerwild/DopplerWild.git
