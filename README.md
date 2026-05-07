@@ -49,7 +49,7 @@ The dataset is hosted on Kaggle:
 
 - Dataset: <https://www.kaggle.com/datasets/dopplerwild/dopplerwild>
 
-Download into the repo root using the Kaggle CLI:
+Download into the repo root:
 
 ```bash
 curl -L -o dopplerwild.zip \
