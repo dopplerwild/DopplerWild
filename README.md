@@ -61,8 +61,7 @@ mv DopplerWild data
 ```
 
 The unzipped layout matches the defaults in `conf/eval.yaml` and
-`conf/train.yaml` — `data/labeled_tracks_Doppler/`,
-`data/checkpoints/ssl_pretraining/`, `data/fold_splits/`, etc.
+`conf/train.yaml`.
 
 ---
 
@@ -72,7 +71,7 @@ The unzipped layout matches the defaults in `conf/eval.yaml` and
 
 **Validate from a saved checkpoint** — driven by the unified
 [conf/eval.yaml](conf/eval.yaml). Pick the row that matches the trained
-checkpoint; `<run_dir>` is the directory written by training:
+checkpoint;
 
 | Method | Task | Command |
 |---|---|---|
