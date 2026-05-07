@@ -544,8 +544,13 @@ def build_eval_test_loader(
             train_df = df[df["fold"] != int(test_fold)].reset_index(drop=True)
             stats_split_label = f"fold != {test_fold}"
         elif test_location is not None:
-            train_df = df[df[location_column] != str(test_location)].reset_index(drop=True)
-            stats_split_label = f"location != {test_location!r}"
+            task_name = str(getattr(cfg, "task_name", "") or "")
+            if task_name == "MotionState":
+                train_df = df.reset_index(drop=True)
+                stats_split_label = f"all rows (cross-loc MotionState, test_location={test_location!r})"
+            else:
+                train_df = df[df[location_column] != str(test_location)].reset_index(drop=True)
+                stats_split_label = f"location != {test_location!r}"
         else:
             train_df = df.reset_index(drop=True)
             stats_split_label = "all rows"
